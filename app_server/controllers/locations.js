@@ -46,8 +46,8 @@ module.exports.locationInfo = function(req, res) {
             rating: 3,
             facilities: ['Hot drinks', 'Food', 'Premium wifi'],
             coords: {
-                lat: 51.455041,
-                lng: -0.9690884
+                lat: 12.9195450,
+              lng: 77.6848090
             },
             openingTimes: [{
                 days: 'Monday - Friday',
@@ -62,7 +62,7 @@ module.exports.locationInfo = function(req, res) {
             }, {
                 days: 'Sunday',
                 closed: true
-            }]),
+            }],
             reviews: [{
                 author: 'Simon Holmes',
                 rating: 5,
