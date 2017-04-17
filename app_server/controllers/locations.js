@@ -10,9 +10,9 @@ module.exports.homelist = function(req, res) {
         locations: [{
             name: 'Starcups',
             address: '125 High Street, Reading, RG6 1PS',
-            rating: 3,
+            rating: 4,
             facilities: ['Hot drinks', 'Food', 'Premium wifi'],
-            distance: '100m'
+            distance: '130m'
         }, {
             name: 'Cafe Hero',
             address: '125 High Street, Reading, RG6 1PS',
