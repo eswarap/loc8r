@@ -1,3 +1,4 @@
+/*eslint-env node */
 var mongoose = require('mongoose');
 
 var reviewSchema = new mongoose.Schema({

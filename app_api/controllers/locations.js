@@ -185,7 +185,7 @@ module.exports.locationsDeleteOne = function(req, res) {
   var locationid = req.params.locationid;
   if (locationid) {
     Loc
-      .findByIdAndRemove(locationid)
+      .remove(locationid)
       .exec(
         function(err, location) {
           if (err) {
