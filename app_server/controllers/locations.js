@@ -45,7 +45,7 @@ module.exports.locationInfo = function(req, res) {
             address: '125 High Street, Reading, RG6 1PS',
             rating: 3,
             facilities: ['Hot drinks', 'Food', 'Premium wifi'],
-            coords: {
+            (coords: {
                 lat: 51.455041,
                 lng: -0.9690884
             },
@@ -62,7 +62,7 @@ module.exports.locationInfo = function(req, res) {
             }, {
                 days: 'Sunday',
                 closed: true
-            }],
+            }]),
             reviews: [{
                 author: 'Simon Holmes',
                 rating: 5,
