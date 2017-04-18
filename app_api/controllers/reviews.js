@@ -11,7 +11,7 @@ var sendJSONresponse = function(res, status, content) {
 module.exports.reviewsCreate = function(req, res) {
   if (req.params.locationid) {
     Loc
-      .findById(req.params.locationid)
+      .findById({_id:req.params.locationid})
       .select('reviews')
       .exec(
         function(err, location) {

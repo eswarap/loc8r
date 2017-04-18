@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var gracefulShutdown;
-var dbURI = 'mongodb://localhost/Loc8r';
+var dbURI = 'mongodb://localhost:27017/Loc8r';
 if (process.env.NODE_ENV === 'production') {
     //dbURI = process.env.MONGOLAB_URI;
     dbURI ='mongodb://admin:password@ds163010.mlab.com:63010/loc8r';
@@ -8,9 +8,20 @@ if (process.env.NODE_ENV === 'production') {
 
 mongoose.connect(dbURI);
 
+console.log('dbURI ' +dbURI);
+
+mongoose.connection.on('connected', function () {
+    mongoose.connection.db.collectionNames(function (err, names) {
+        if (err) console.log(err);
+        else console.log(names);
+    });
+});
+
 // CONNECTION EVENTS
 mongoose.connection.on('connected', function() {
-    console.log('Mongoose connected to ' + dbURI);
+    (function() {
+        console.log('Mongoose connected to ' + dbURI);
+    })();
 });
 mongoose.connection.on('error', function(err) {
     console.log('Mongoose connection error: ' + err);
