@@ -17,7 +17,7 @@
     "jade": "~1.11.0",
     "jquery": "^3.2.1",
     "mongodb":"~2.2.26",
-    "mongoose": "^3.8.40",
+    "mongoose": "^5.9.20",
     "morgan": "~1.8.1",
     "readline": "0.0.x",
     "serve-favicon": "~2.4.2"
